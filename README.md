@@ -1,2 +1,2 @@
 # My-portfolio
-hi, i am  Lakshmi Sinu from AiMl c
+hi, This is Lakshmi Sinu Subhagan and this is my portfolio ,https://lakshmi1111.pythonanywhere.com/#projects
