@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <h2 class="logo">MyPortfolio<span>.</span></h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+            <h1>Hello, I'm <span>Lakshmi Sinu Subhagan </span></h1>
+            <h3>Computer Science Student | AI & ML Enthusiast</h3>
+            <p>Exploring technology, building creative solutions
+            and turning ideas into reality.</p>
+            <a href="#projects" class="btn">Explore My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About <span>Me</span></h2>
+        <p>I am a Computer Science student passionate about
+        programming, artificial intelligence and innovation.
+        I enjoy learning new technologies and creating projects
+        that solve real-world problems.</p>
+    </section>
+
+    <section id="skills">
+        <h2>My <span>Skills</span></h2>
+        <div class="cards">
+            <div class="card">Python</div>
+            <div class="card">C Programming</div>
+            <div class="card">Java</div>
+            <div class="card">HTML & CSS</div>
+            <div class="card">Artificial Intelligence</div>
+            <div class="card">Machine Learning</div>
+        </div>
+    </section>
+
+    
+<section id="projects">
+    <h2>My <span>Projects</span></h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Digital Immunity System</h3>
+            <p>
+                An Artificial Immune System project focused
+                on detecting cyber threats using the
+                NF-ToN-IoT-v3 dataset.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Smart Classroom Ventilation</h3>
+            <p>
+                An Arduino-based project that monitors
+                classroom temperature using a DHT11 sensor
+                and automatically controls ventilation.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+  
+<section id="contact">
+    <h2>Let's <span>Connect</span></h2>
+
+    <p class="contact-intro">
+        Have a question, an idea or an opportunity?
+        I'd love to hear from you.
+    </p>
+
+    {% if success %}
+    <p class="success-message" id="successMessage">
+        Your message has been sent successfully!
+    </p>
+{% endif %}
+
+    <form action="/contact" method="POST">
+
+        <input type="text" name="name"
+               placeholder="Your Name" required>
+
+        <input type="email" name="email"
+               placeholder="Your Email Address" required>
+
+        <textarea name="message"
+                  placeholder="Write your message here..."
+                  required></textarea>
+
+        <button type="submit" class="btn">
+            Send Message →
+        </button>
+
+    </form>
+</section>
+
+
+    <footer>
+        <p>© 2026 My Portfolio | Designed with passion</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
